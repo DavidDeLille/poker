@@ -44,7 +44,7 @@ def calc_probability(amount_players, hand, flop=None, turn=None, river=None):
 		deck = [c for c in deck if not c in hand+flop+turn+river]
 		shareds = [flop+turn+river]
 	for s in shareds:
-		# create dictionary of hands that win/lose/draw against the player
+		# create list of hands that are better or equal of the player's hand
 		player_score = score(list(s)+hand)
 		better = list()
 		equal = list()
